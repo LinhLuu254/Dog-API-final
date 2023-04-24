@@ -1,0 +1,159 @@
+
+    .lists {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    float: center;
+    height: 400px;
+    width: 300px;
+    padding: 20px;
+    background-color: rgb(90, 206, 199);
+    border-radius: 10px;
+    border: double 8px  brown;
+  }
+  legend{
+    color: rgb(84, 46, 26);
+    font-size: 20px;
+    font-weight: bold;
+    font-family: cursive;
+  }
+
+option{
+    border: solid 2px black;
+    border-radius: 5px;
+    background-color: rgb(126, 95, 236);
+    padding: 10px;
+    margin: 10px;
+    color: rgb(87, 33, 33);
+    font-weight: bold;
+    font-family: cursive;
+}
+
+.popup{
+  background-color: #d9befa;
+  border: dotted 5px rgb(92, 59, 20);
+  padding: 20px;
+  font-family: cursive;
+}
+.col{
+    background-color: #ec925a;
+    border-radius: 5px;
+    
+}
+
+.row{
+    border: solid 3px brown;
+}
+
+.bi-chat-heart{
+  font-size: 35px;
+}
+
+span.name , span.age{
+  font-weight: bolder;
+  font-size: x-large;
+  font-family: cursive;
+}
+
+span.breed{
+  font-style: italic;
+  font-size: large;
+}
+
+span.treat{
+  font-style: italic;
+  font-size: large;
+  font-weight: bold;
+  font-family: cursive;
+}
+
+span.message{
+  font-size: larger;
+  font-family: cursive;
+}
+
+.container-fuild{
+  border: double 7px brown;
+  background-color: #ffe5a8;
+  text-align: center;
+  color: #184b42;
+  font-family: cursive;
+}
+#dogImg img{
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 5px;
+    border: solid 3px #184b42;
+    box-shadow: 2px;
+}
+
+h2.text-center{
+    font-weight: bold;
+  font-family: cursive;
+}
+
+img.logo{
+    border-radius: 50px;
+}
+
+.d-block{
+  background-color: none;
+}
+
+/* CSS button */
+.button-74 {
+background-color: #fbeee0;
+border: 2px solid #422800;
+border-radius: 30px;
+box-shadow: #422800 4px 4px 0 0;
+color: #422800;
+cursor: pointer;
+display: inline-block;
+font-weight: 600;
+font-size: 18px;
+padding: 0 18px;
+line-height: 50px;
+text-align: center;
+text-decoration: none;
+user-select: none;
+-webkit-user-select: none;
+touch-action: manipulation;
+}
+
+.button-74:hover {
+background-color: #fff;
+}
+
+.button-74:active {
+box-shadow: #422800 2px 2px 0 0;
+transform: translate(2px, 2px);
+}
+
+@media (min-width: 768px) {
+.button-74 {
+  min-width: 120px;
+  padding: 0 25px;
+}
+}
+
+.closeBtn {
+  position: absolute;
+  top: 5px;
+  right: 12px;
+  font-size: 17px;
+  color: #7c7575;
+  text-decoration: none;
+}
+
+.popup-content {
+  width: 300px;
+  margin: 0 auto;
+  padding: 40px;
+  margin-top: 10px;
+  border-radius: 5px;
+  background: #fff;
+  position: relative;
+  border: 3px solid brown;
+  background-color: antiquewhite;
+}
