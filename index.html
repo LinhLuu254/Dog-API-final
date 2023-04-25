@@ -47,11 +47,11 @@
           <form class ="popup-content">
             <div class="form-group">
               <label for="inputAge">Dog's age:</label>
-              <input type="text" class="form-control" id="inputAge" aria-describedby="input dog's age" placeholder="Enter dog's age">
+              <input type="text" class="form-control" id="inputAge" name="inputAge" aria-describedby="input dog's age" placeholder="Enter dog's age">
             </div>
             <div class="form-group">
               <label for="inputBreed">Breed:</label>
-              <input type="text" class="form-control" id="inputBreed" placeholder="Ex: American Bulldog">
+              <input type="text" class="form-control" id="inputBreed" name="inputBreed" placeholder="Ex: American Bulldog">
             </div>
             <fieldset>
               <legend>Gender: </legend>
@@ -70,32 +70,27 @@
             </fieldset>
               <div class="form-group">
                 <label for="inputName">Dog's name:</label>
-                <input type="text" class="form-control" id="inputName" aria-describedby="input dog's name" placeholder="type dog's name here">
+                <input type="text" class="form-control" id="inputName" name="inputName" aria-describedby="input dog's name" placeholder="type dog's name here">
               </div>
               <div class="form-group">
                 <label for="inputTreat">Treat:</label>
-                <input type="text" class="form-control" id="inputTreat" placeholder="enter dog's treat">
+                <input type="text" class="form-control" id="inputTreat" name="inputTreat" placeholder="enter dog's treat">
               </div>
               <br> 
-              <button class="button-74 m-1" id="id_updatedDog">Create</button>
+              <button class="button-74 m-1" id="id_createDog">Create</button>
+
+              <button class="button-74 m-1" id="id_updatedDog">Update dog info</button>
           </form>
         </div>
           <div class="col m-1 p-3">
               <div class="lists"> </div>
-                <div class="container d-flex justify-content-center m-3">
-                  
-                  <button class="button-74 m-1" id="id_updatedDog">Update dog info</button>
-                  
-                  
-                </div>
-              
+              <div class="container d-flex justify-content-center m-3">
+                <button class="button-74 m-1" id="id_readDog">Read</button>
+                <button class="button-74 m-1" id="id_deleteDog">Detele</button> 
+              </div>
           </div>
           <div class="col m-1 p-3 justify-content-center">
             <h2 class="text-center"></i> Dog's Info <i class="bi bi-brightness-high-fill"></i></h2>
-            <div class="container d-flex justify-content-center">
-              <button class="button-74 m-1" id="id_readDog">Read</button>
-              <button class="button-74 m-1" id="id_deleteDog">Detele</button>
-            </div>
               <div class="popup">
                   <p id="name"></p>
                   <p id="dogImg"></p>
