@@ -1,40 +1,55 @@
 
-    .lists {
-    display: flex;
-    flex-wrap: wrap;
-    margin: auto;
-    float: center;
-    height: 400px;
-    width: 300px;
-    padding: 20px;
-    background-color: rgb(90, 206, 199);
-    border-radius: 10px;
-    border: double 8px  brown;
-  }
-  legend{
-    color: rgb(84, 46, 26);
-    font-size: 20px;
-    font-weight: bold;
-    font-family: cursive;
-  }
-
-option{
-    border: solid 2px black;
-    border-radius: 5px;
-    background-color: rgb(126, 95, 236);
-    padding: 10px;
-    margin: 10px;
-    color: rgb(87, 33, 33);
-    font-weight: bold;
-    font-family: cursive;
+.lists {
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  float: center;
+  height: 300px;
+  width: 300px;
+  padding: 20px;
+  background-color: rgb(90, 206, 199);
+  border-radius: 10px;
+  border: double 8px  brown;
 }
 
 .popup{
-  background-color: #d9befa;
+  background-color: #efb7eb;
   border: dotted 5px rgb(92, 59, 20);
   padding: 20px;
   font-family: cursive;
 }
+
+label{
+  color: rgb(84, 46, 26);
+  font-size: 15px;
+  font-weight: bold;
+  font-family: cursive;
+
+}
+
+legend{
+  color: rgb(84, 46, 26);
+  font-size: 18px;
+  font-weight: bold;
+  font-family: cursive;
+}
+
+option{
+  border: solid 2px black;
+  border-radius: 5px;
+  background-color: rgb(156, 129, 254);
+  padding: 5px;
+  margin: 10px;
+  color: rgb(87, 33, 33);
+  font-weight: bold;
+  font-family: cursive;
+}
+
+option:hover{
+  background-color: #ffe5a8;
+}
+
+
 .col{
     background-color: #ec925a;
     border-radius: 5px;
@@ -74,7 +89,7 @@ span.message{
 
 .container-fuild{
   border: double 7px brown;
-  background-color: #ffe5a8;
+  background-color: #f5e171;
   text-align: center;
   color: #184b42;
   font-family: cursive;
@@ -103,7 +118,7 @@ img.logo{
 
 /* CSS button */
 .button-74 {
-background-color: #fbeee0;
+background-color: #c5beb6;
 border: 2px solid #422800;
 border-radius: 30px;
 box-shadow: #422800 4px 4px 0 0;
@@ -122,7 +137,7 @@ touch-action: manipulation;
 }
 
 .button-74:hover {
-background-color: #fff;
+background-color: #e8a6a6;
 }
 
 .button-74:active {
@@ -137,23 +152,25 @@ transform: translate(2px, 2px);
 }
 }
 
-.closeBtn {
-  position: absolute;
-  top: 5px;
-  right: 12px;
-  font-size: 17px;
-  color: #7c7575;
-  text-decoration: none;
-}
 
-.popup-content {
-  width: 300px;
+.container-sm {
+  width: 400px;
   margin: 0 auto;
-  padding: 40px;
+  padding: 10px;
   margin-top: 10px;
   border-radius: 5px;
   background: #fff;
   position: relative;
   border: 3px solid brown;
-  background-color: antiquewhite;
+  background-color: rgb(250, 224, 188);
+}
+
+.info{
+  width: fit-content;
+  height: auto;
+  padding: 10px;
+  border-radius: 5px;
+  border:solid 2px  #184b42;
+  background-color: #f9e9c4;
+  font-family: cursive;
 }

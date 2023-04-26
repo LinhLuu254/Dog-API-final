@@ -43,44 +43,44 @@
   <div class="container">
       <div class="row">
         <div class="col m-1 p-3">
-          <h2 class="text-align-center">Create a new dog's data</h2>
-          <form class ="popup-content">
-            <div class="form-group">
+          <div class ="container-sm">
+            <div class="form-group d-flex m-1">
               <label for="inputAge">Dog's age:</label>
-              <input type="text" class="form-control" id="inputAge" name="inputAge" aria-describedby="input dog's age" placeholder="Enter dog's age">
+              <input style="width: 60px;" type="text" class="form-control" id="inputAge" name="inputAge" aria-describedby="input dog's age" placeholder="no.">
             </div>
-            <div class="form-group">
+            <div class="form-group d-flex m-1">
               <label for="inputBreed">Breed:</label>
-              <input type="text" class="form-control" id="inputBreed" name="inputBreed" placeholder="Ex: American Bulldog">
+              <input style="width: 250px;" type="text" class="form-control" id="inputBreed" name="inputBreed" placeholder="Ex: American Bulldog">
             </div>
-            <fieldset>
-              <legend>Gender: </legend>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="gender" id="dogGenderMale" value="M" checked>
-                <label class="form-check-label" for="dogGenderMale">
-                  Male 
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="gender" id="dogGenderFemale" value="F">
-                <label class="form-check-label" for="dogGenderFemale">
-                  Female
-                </label>
-              </div>
-            </fieldset>
-              <div class="form-group">
+              <div class="form-group d-flex m-1">
                 <label for="inputName">Dog's name:</label>
-                <input type="text" class="form-control" id="inputName" name="inputName" aria-describedby="input dog's name" placeholder="type dog's name here">
+                <input style="width: 250px;" type="text" class="form-control" id="inputName" name="inputName" aria-describedby="input dog's name" placeholder="type dog's name here">
               </div>
-              <div class="form-group">
+              <div class="form-group d-flex m-1">
                 <label for="inputTreat">Treat:</label>
-                <input type="text" class="form-control" id="inputTreat" name="inputTreat" placeholder="enter dog's treat">
+                <input style="width: 250px;"  type="text" class="form-control" id="inputTreat" name="inputTreat" placeholder="enter dog's treat">
               </div>
+              <fieldset class="d-block">
+                <legend>Gender: </legend>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="gender" id="dogGenderMale" value="M" checked>
+                  <label class="form-check-label" for="dogGenderMale">
+                    Male 
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="gender" id="dogGenderFemale" value="F">
+                  <label class="form-check-label" for="dogGenderFemale">
+                    Female
+                  </label>
+                </div>
+              </fieldset>
               <br> 
-              <button class="button-74 m-1" id="id_createDog">Create</button>
-
-              <button class="button-74 m-1" id="id_updatedDog">Update dog info</button>
-          </form>
+              <div class="container d-flex justify-content-center m-3">
+                <button class="button-74 m-1" id="id_createDog">Create</button>
+                <button class="button-74 m-1" id="id_updatedDog">Update</button>
+              </div>
+            </div>
         </div>
           <div class="col m-1 p-3">
               <div class="lists"> </div>
@@ -91,6 +91,14 @@
           </div>
           <div class="col m-1 p-3 justify-content-center">
             <h2 class="text-center"></i> Dog's Info <i class="bi bi-brightness-high-fill"></i></h2>
+              <div class="info">
+                <h6>"Your dog info will display here"</h6>
+                <p><ol>Instruction:
+                  <li>Choose a dog</li>
+                  <li>Click the button to read, update or delete.</li>
+                </ol></p>
+                <p>Notice: When you create, update or delete. Scroll up and down the list to find your new/updated dog.</p>
+              </div>
               <div class="popup">
                   <p id="name"></p>
                   <p id="dogImg"></p>

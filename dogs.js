@@ -10,9 +10,31 @@ const dogPics =[
   "images\\dog8.jpg",
   "images\\dog9.jpg",
   "images\\dog10.jpg",
+  "images\\dog11.jpg",
+  "images\\dog12.jpg",
+
   ];
 
   let dogData;
+
+  const dogRefresh = () =>{
+    let container1 = document.getElementById('dogList');
+    container1.replaceChildren();
+
+  dogData.forEach((dog) => {
+  
+    let dogInfo =`<option>${dog.name}</option>`;
+   
+    // Add the dogInfo to the select list
+    $("#dogList").append(dogInfo);
+    $("option").css("background-color", "#98FB98");
+    $("option").css("color", "#013220s");
+
+    $(".popup").css("background-color", "#d0f0c0");
+
+  });
+
+  }
 
   const process = (data) => {
     // Storing in a global variable for access later
@@ -57,8 +79,12 @@ const dogPics =[
 
 const setUp = () => { 
 
-  let listBox = $("<fieldset><legend><i class='bi bi-hearts'></i>Choose a dog you want to visit:</legend><select id='dogList' name='doglist' Size=5></fieldset>");
+  let listBox = $("<fieldset><legend><i class='bi bi-hearts'></i>Choose a dog you want to read, update or delete:</legend><select id='dogList' name='doglist' Size=5></fieldset>");
   $(".lists").append(listBox);
+
+ 
+
+  $(".popup").fadeOut();
 
   getDogData();
 
@@ -70,7 +96,10 @@ const setUp = () => {
  
 
   $("#id_readDog").click(function() { 
-    $(".popup").show();
+
+    $(".info").fadeOut();
+
+    $(".popup").fadeIn();
 
     let dogImg = document.createElement("img");
     dogImg.src = dogPics[index];
@@ -108,7 +137,9 @@ const setUp = () => {
     
   }); 
   
-  });
+  })
+
+  
 
   $("#id_deleteDog").click(function(){
     //get the selected index
@@ -119,18 +150,19 @@ const setUp = () => {
       dogPics.splice(index, 1);
 
       //Remove the selected option from the list
-      $("#dogList option:selected").remove();
+      $("#dogList option:selected").fadeOut();
 
       //Clear the dog information popup
-      $(".popup").hide();
+      $(".popup").fadeOut();
+      $(".info").fadeIn();
+
+      $("option").css("background-color", "#98FB98");
+
 
       console.log ("detele index" + index);
       console.log(dogData)
   });
-   
-};
 
-$(document).ready(function() {
   $("#id_createDog").click(function(){
 
     let dogAge = $("input[name=inputAge]").val();
@@ -139,22 +171,72 @@ $(document).ready(function() {
     let dogBreed = $("input[name=inputBreed]").val();
     let dogGender = $("input[type=radio][name=gender]:checked").val();
     let dogTreat =$("input[name=inputTreat]").val();
-
-
+    let numRandom = Math.floor(Math.random()* 15) + 1003827;
+  
+    let dogShow = dogName.toUpperCase(); 
+  
   let newDog = {
+    "_id": numRandom,
     "age": dogAge,
     "breed": dogBreed,
     "gender": dogGender,
-    "name": dogName,
+    "name": dogShow,
     "treat": dogTreat,
   };
   
+  dogImg.src = dogPics[10];
+
   dogData.push(newDog);
+  
+  dogRefresh(); 
 
+  $(".popup").fadeOut();
+  $(".info").fadeIn();
+  
   console.log(newDog);
-
+  console.log(dogData);
+  
   });
+  
+
+  $("#id_updatedDog").click(function(){
+
+    let index = $("#dogList").prop("selectedIndex");
+
+    console.log("Updated index is", index);
+
+    let dogAge = $("input[name=inputAge]").val();
+    console.log ("Dog Age" + dogAge);
+    let dogName = $("input[name=inputName]").val();
+    let dogBreed = $("input[name=inputBreed]").val();
+    let dogGender = $("input[type=radio][name=gender]:checked").val();
+    let dogTreat =$("input[name=inputTreat]").val();
+    let numRandom = Math.floor(Math.random()* 15) + 1003827;
+
+
+    let dogShow = dogName.toUpperCase(); 
+
+    
+  dogData[index] = {
+    "_id": numRandom,
+    "age": dogAge,
+    "breed": dogBreed,
+    "gender": dogGender,
+    "name": dogShow,
+    "treat": dogTreat,
+  };
+  
+
+  dogRefresh();
+
+  console.log(dogData);
+
+
 });
+
+}; 
+
+
 
 $(document).ready(setUp);
 
